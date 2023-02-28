@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>buildresultsummary - bamboo_8_0_6 Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bamboo_8_0_6</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>buildresultsummary</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="buildresultsummary_id">buildresultsummary_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="brs_artifact_link.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_5j2wsxrddw99842p10ppyla50"><a href='brs_artifact_link.html'>brs_artifact_link</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_5j2wsxrddw99842p10ppyla50<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="brs_artifact_link.producerjobresult_id references buildresultsummary.buildresultsummary_id via fk_eb6e20lkefhl1et580d5ry5me"><a href='brs_artifact_link.html'>brs_artifact_link</a><span class='relatedKey'>.producerjobresult_id</span></td>
+                                                <td class="constraint detail">fk_eb6e20lkefhl1et580d5ry5me<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="brs_consumed_subscription.consumer_resultsummary_id references buildresultsummary.buildresultsummary_id via fk_l4tpi519m59qhdvh4qx2cjp2n"><a href='brs_consumed_subscription.html'>brs_consumed_subscription</a><span class='relatedKey'>.consumer_resultsummary_id</span></td>
+                                                <td class="constraint detail">fk_l4tpi519m59qhdvh4qx2cjp2n<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="brs_linkedjiraissues.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_rhamoijfnb7coquyeag9aj978"><a href='brs_linkedjiraissues.html'>brs_linkedjiraissues</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_rhamoijfnb7coquyeag9aj978<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="buildresult_warning_summary.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_epui3fw0r8i3sr38y3wintoxs"><a href='buildresult_warning_summary.html'>buildresult_warning_summary</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_epui3fw0r8i3sr38y3wintoxs<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="buildresultsummary.chain_result references buildresultsummary.buildresultsummary_id via fk_p3gerdfga5l9fu5qijd0j36sj"><a href='buildresultsummary.html'>buildresultsummary</a><span class='relatedKey'>.chain_result</span></td>
+                                                <td class="constraint detail">fk_p3gerdfga5l9fu5qijd0j36sj<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="buildresultsummary_customdata.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_ia81c3o6qb69puc74f4rx1rm2"><a href='buildresultsummary_customdata.html'>buildresultsummary_customdata</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_ia81c3o6qb69puc74f4rx1rm2<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="buildresultsummary_label.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_lkfm80iiqseau7cn3s0gy6010"><a href='buildresultsummary_label.html'>buildresultsummary_label</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_lkfm80iiqseau7cn3s0gy6010<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="chain_stage_result.chainresult_id references buildresultsummary.buildresultsummary_id via fk_4p9t5luuw2awjxfgensarfhpn"><a href='chain_stage_result.html'>chain_stage_result</a><span class='relatedKey'>.chainresult_id</span></td>
+                                                <td class="constraint detail">fk_4p9t5luuw2awjxfgensarfhpn<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="relevant_changesets.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_qi40i74ayf29ovlos9vigoown"><a href='relevant_changesets.html'>relevant_changesets</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_qi40i74ayf29ovlos9vigoown<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="repository_changeset.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_t9jxtrvky1fabch7y856mbojd"><a href='repository_changeset.html'>repository_changeset</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_t9jxtrvky1fabch7y856mbojd<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="test_class_result.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_jkq1lf9h2tkioay789nuliwxf"><a href='test_class_result.html'>test_class_result</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_jkq1lf9h2tkioay789nuliwxf<span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="variable_context.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_ebnchmunwnv7t6q39xw3ogqem"><a href='variable_context.html'>variable_context</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_ebnchmunwnv7t6q39xw3ogqem<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="variable_substitution.buildresultsummary_id references buildresultsummary.buildresultsummary_id via fk_1oyf19gdr05qq9ppyyxqjs1q3"><a href='variable_substitution.html'>variable_substitution</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_1oyf19gdr05qq9ppyyxqjs1q3<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="build_type">build_type</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="created_date">created_date</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="build_key">build_key</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="plan_name">plan_name</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="buildresultsummary.plan_name&#39;s name implies that it&#39;s a child of id_generator.name, but it doesn&#39;t reference that column."><a href='id_generator.html'>id_generator</a><span class='relatedKey'>.name</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="build_number">build_number</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="build_state">build_state</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="life_cycle_state">life_cycle_state</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="build_date">build_date</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="build_cancelled_date">build_cancelled_date</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="build_completed_date">build_completed_date</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="duration">duration</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="processing_duration">processing_duration</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="time_to_fix">time_to_fix</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="trigger_reason">trigger_reason</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="delta_state">delta_state</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="build_agent_id">build_agent_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="stageresult_id">stageresult_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="buildresultsummary.stageresult_id references chain_stage_result.stageresult_id via fk_gp357kl07x691di4i2xn0c8hi"><a href='chain_stage_result.html'>chain_stage_result</a><span class='relatedKey'>.stageresult_id</span></td>
+                                                <td class="constraint detail">fk_gp357kl07x691di4i2xn0c8hi<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="restart_count">restart_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="queue_time">queue_time</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="marked_for_deletion">marked_for_deletion</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="once_off">once_off</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="custom_build">custom_build</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="rebuild">rebuild</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="log_size">log_size</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="variable_context_baseline_id">variable_context_baseline_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="buildresultsummary.variable_context_baseline_id references variable_context_baseline.variable_context_baseline_id via fk_h0ye74xa5mvi5tvu4g3n6hxfs"><a href='variable_context_baseline.html'>variable_context_baseline</a><span class='relatedKey'>.variable_context_baseline_id</span></td>
+                                                <td class="constraint detail">fk_h0ye74xa5mvi5tvu4g3n6hxfs<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="format_version">format_version</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="failure_test_count">failure_test_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="success_test_count">success_test_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="total_test_count">total_test_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="broken_test_count">broken_test_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="existing_test_count">existing_test_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="fixed_test_count">fixed_test_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="total_test_duration">total_test_duration</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="quarantined_test_count">quarantined_test_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="skipped_test_count">skipped_test_count</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="vcs_update_time">vcs_update_time</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="chain_result">chain_result</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="buildresultsummary.chain_result references buildresultsummary.buildresultsummary_id via fk_p3gerdfga5l9fu5qijd0j36sj"><a href='buildresultsummary.html'>buildresultsummary</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_p3gerdfga5l9fu5qijd0j36sj<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="continuable">continuable</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="fixed_in_result">fixed_in_result</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="specs_result">specs_result</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>false</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="mergeresult_id">mergeresult_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="buildresultsummary.mergeresult_id references merge_result.mergeresult_id via fk_i4wjndm6u2d3gy8oepw8waqu3"><a href='merge_result.html'>merge_result</a><span class='relatedKey'>.mergeresult_id</span></td>
+                                                <td class="constraint detail">fk_i4wjndm6u2d3gy8oepw8waqu3<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> buildresultsummary_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>buildresultsummary_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>brs_agent_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>build_agent_id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>brs_build_state_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>build_state</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>brs_deletion_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>marked_for_deletion</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> brs_key_number_unique</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>build_key + build_number</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>brs_life_cycle_state_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>life_cycle_state</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>brs_log_size_idx</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>log_size</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>key_number_delta_state</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>delta_state</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="brs_artifact_link.html" target="_top" title="brs_artifact_link" alt="" coords="836,87,1069,268">
+<area shape="rect" id="node2" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="333,752,739,2053">
+<area shape="rect" id="node6" href="merge_result.html" target="_top" title="merge_result" alt="" coords="13,1957,281,2133">
+<area shape="rect" id="node7" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="35,975,260,1151">
+<area shape="rect" id="node8" href="variable_context_baseline.html" target="_top" title="variable_context_baseline" alt="" coords="5,1488,289,1611">
+<area shape="rect" id="node3" href="brs_consumed_subscription.html" target="_top" title="brs_consumed_subscription" alt="" coords="1167,5,1461,181">
+<area shape="rect" id="node4" href="brs_linkedjiraissues.html" target="_top" title="brs_linkedjiraissues" alt="" coords="835,285,1070,432">
+<area shape="rect" id="node5" href="buildresult_warning_summary.html" target="_top" title="buildresult_warning_summary" alt="" coords="794,449,1111,625">
+<area shape="rect" id="node9" href="buildresultsummary_customdata.html" target="_top" title="buildresultsummary_customdata" alt="" coords="783,643,1123,789">
+<area shape="rect" id="node10" href="buildresultsummary_label.html" target="_top" title="buildresultsummary_label" alt="" coords="809,807,1096,1071">
+<area shape="rect" id="node11" href="relevant_changesets.html" target="_top" title="relevant_changesets" alt="" coords="1193,1071,1435,1193">
+<area shape="rect" id="node12" href="repository_changeset.html" target="_top" title="repository_changeset" alt="" coords="829,1124,1077,1329">
+<area shape="rect" id="node13" href="test_class_result.html" target="_top" title="test_class_result" alt="" coords="836,1347,1069,1523">
+<area shape="rect" id="node14" href="variable_context.html" target="_top" title="variable_context" alt="" coords="836,1540,1069,1716">
+<area shape="rect" id="node15" href="variable_substitution.html" target="_top" title="variable_substitution" alt="" coords="828,1733,1077,1909">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/buildresultsummary.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="brs_artifact_link.html" target="_top" title="brs_artifact_link" alt="" coords="836,228,1069,409">
+<area shape="rect" id="node2" href="artifact.html" target="_top" title="artifact" alt="" coords="464,357,608,445">
+<area shape="rect" id="node3" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="333,487,739,1788">
+<area shape="rect" id="node9" href="merge_result.html" target="_top" title="merge_result" alt="" coords="13,1692,281,1868">
+<area shape="rect" id="node10" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="35,431,260,607">
+<area shape="rect" id="node11" href="variable_context_baseline.html" target="_top" title="variable_context_baseline" alt="" coords="5,108,289,231">
+<area shape="rect" id="node4" href="brs_consumed_subscription.html" target="_top" title="brs_consumed_subscription" alt="" coords="1167,147,1461,323">
+<area shape="rect" id="node5" href="brs_linkedjiraissues.html" target="_top" title="brs_linkedjiraissues" alt="" coords="835,849,1070,996">
+<area shape="rect" id="node6" href="build.html" target="_top" title="build" alt="" coords="462,2052,610,2140">
+<area shape="rect" id="node7" href="project.html" target="_top" title="project" alt="" coords="77,2015,218,2103">
+<area shape="rect" id="node8" href="buildresult_warning_summary.html" target="_top" title="buildresult_warning_summary" alt="" coords="794,1013,1111,1189">
+<area shape="rect" id="node12" href="buildresultsummary_customdata.html" target="_top" title="buildresultsummary_customdata" alt="" coords="783,1207,1123,1353">
+<area shape="rect" id="node13" href="buildresultsummary_label.html" target="_top" title="buildresultsummary_label" alt="" coords="809,1815,1096,2079">
+<area shape="rect" id="node14" href="label.html" target="_top" title="label" alt="" coords="473,1911,599,1999">
+<area shape="rect" id="node15" href="deployment_result.html" target="_top" title="deployment_result" alt="" coords="837,79,1068,167">
+<area shape="rect" id="node16" href="deployment_version.html" target="_top" title="deployment_version" alt="" coords="415,147,657,235">
+<area shape="rect" id="node17" href="relevant_changesets.html" target="_top" title="relevant_changesets" alt="" coords="1193,1003,1435,1125">
+<area shape="rect" id="node18" href="repository_changeset.html" target="_top" title="repository_changeset" alt="" coords="829,1371,1077,1576">
+<area shape="rect" id="node19" href="vcs_location.html" target="_top" title="vcs_location" alt="" coords="447,1805,625,1893">
+<area shape="rect" id="node20" href="stage_variable_context.html" target="_top" title="stage_variable_context" alt="" coords="406,252,666,340">
+<area shape="rect" id="node21" href="test_case_result.html" target="_top" title="test_case_result" alt="" coords="1505,1852,1712,1940">
+<area shape="rect" id="node22" href="test_class_result.html" target="_top" title="test_class_result" alt="" coords="1197,1849,1431,2025">
+<area shape="rect" id="node23" href="test_class.html" target="_top" title="test_class" alt="" coords="873,2096,1032,2184">
+<area shape="rect" id="node24" href="user_commit.html" target="_top" title="user_commit" alt="" coords="1222,1373,1406,1461">
+<area shape="rect" id="node25" href="variable_baseline_item.html" target="_top" title="variable_baseline_item" alt="" coords="405,5,667,93">
+<area shape="rect" id="node26" href="variable_context.html" target="_top" title="variable_context" alt="" coords="836,427,1069,603">
+<area shape="rect" id="node27" href="variable_substitution.html" target="_top" title="variable_substitution" alt="" coords="828,620,1077,796">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/buildresultsummary.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="brs_artifact_link.html" target="_top" title="brs_artifact_link" alt="" coords="1063,87,1296,268">
+<area shape="rect" id="node2" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="560,640,965,1941">
+<area shape="rect" id="node6" href="merge_result.html" target="_top" title="merge_result" alt="" coords="240,1640,508,1816">
+<area shape="rect" id="node7" href="id_generator.html" target="_top" title="id_generator" alt="" coords="5,1669,188,1787">
+<area shape="rect" id="node8" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="261,1141,487,1317">
+<area shape="rect" id="node9" href="variable_context_baseline.html" target="_top" title="variable_context_baseline" alt="" coords="232,1376,516,1499">
+<area shape="rect" id="node3" href="brs_consumed_subscription.html" target="_top" title="brs_consumed_subscription" alt="" coords="1393,5,1688,181">
+<area shape="rect" id="node4" href="brs_linkedjiraissues.html" target="_top" title="brs_linkedjiraissues" alt="" coords="1062,285,1297,432">
+<area shape="rect" id="node5" href="buildresult_warning_summary.html" target="_top" title="buildresult_warning_summary" alt="" coords="1021,449,1338,625">
+<area shape="rect" id="node10" href="buildresultsummary_customdata.html" target="_top" title="buildresultsummary_customdata" alt="" coords="1009,643,1349,789">
+<area shape="rect" id="node11" href="buildresultsummary_label.html" target="_top" title="buildresultsummary_label" alt="" coords="1036,1709,1323,1973">
+<area shape="rect" id="node12" href="relevant_changesets.html" target="_top" title="relevant_changesets" alt="" coords="1420,789,1661,912">
+<area shape="rect" id="node13" href="repository_changeset.html" target="_top" title="repository_changeset" alt="" coords="1055,843,1303,1048">
+<area shape="rect" id="node14" href="test_class_result.html" target="_top" title="test_class_result" alt="" coords="1063,1065,1296,1241">
+<area shape="rect" id="node15" href="variable_context.html" target="_top" title="variable_context" alt="" coords="1063,1259,1296,1435">
+<area shape="rect" id="node16" href="variable_substitution.html" target="_top" title="variable_substitution" alt="" coords="1055,1452,1304,1628">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/buildresultsummary.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="access_token.html" target="_top" title="access_token" alt="" coords="739,689,923,777">
+<area shape="rect" id="node2" href="AO_C7F71E_OAUTH_SVC_PROV_TKNS.html" target="_top" title="AO_C7F71E_OAUTH_SVC_PROV_TKNS" alt="" coords="232,1252,584,1340">
+<area shape="rect" id="node3" href="id_generator.html" target="_top" title="id_generator" alt="" coords="5,3060,188,3177">
+<area shape="rect" id="node4" href="AO_4789DD_HEALTH_CHECK_STATUS.html" target="_top" title="AO_4789DD_HEALTH_CHECK_STATUS" alt="" coords="233,1357,583,1445">
+<area shape="rect" id="node5" href="AO_4789DD_PROPERTIES.html" target="_top" title="AO_4789DD_PROPERTIES" alt="" coords="275,1463,541,1551">
+<area shape="rect" id="node6" href="AO_A0B856_WEBHOOK.html" target="_top" title="AO_A0B856_WEBHOOK" alt="" coords="281,1568,535,1656">
+<area shape="rect" id="node7" href="AO_C77861_AUDIT_ENTITY.html" target="_top" title="AO_C77861_AUDIT_ENTITY" alt="" coords="269,1673,547,1761">
+<area shape="rect" id="node8" href="AO_F1B80E_BRANCH_SELECTION.html" target="_top" title="AO_F1B80E_BRANCH_SELECTION" alt="" coords="247,1779,569,1867">
+<area shape="rect" id="node9" href="audit_log.html" target="_top" title="audit_log" alt="" coords="331,1884,485,1972">
+<area shape="rect" id="node10" href="auth_attempt_info.html" target="_top" title="auth_attempt_info" alt="" coords="294,1989,522,2077">
+<area shape="rect" id="node11" href="author.html" target="_top" title="author" alt="" coords="339,5,477,93">
+<area shape="rect" id="node12" href="brs_artifact_link.html" target="_top" title="brs_artifact_link" alt="" coords="1131,1895,1364,2076">
+<area shape="rect" id="node13" href="artifact.html" target="_top" title="artifact" alt="" coords="759,2489,903,2577">
+<area shape="rect" id="node14" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="628,1171,1033,2472">
+<area shape="rect" id="node21" href="merge_result.html" target="_top" title="merge_result" alt="" coords="274,2501,542,2677">
+<area shape="rect" id="node22" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="295,2272,521,2448">
+<area shape="rect" id="node23" href="variable_context_baseline.html" target="_top" title="variable_context_baseline" alt="" coords="266,2695,550,2817">
+<area shape="rect" id="node15" href="brs_consumed_subscription.html" target="_top" title="brs_consumed_subscription" alt="" coords="1461,1355,1756,1531">
+<area shape="rect" id="node16" href="brs_linkedjiraissues.html" target="_top" title="brs_linkedjiraissues" alt="" coords="1130,951,1365,1097">
+<area shape="rect" id="node17" href="build.html" target="_top" title="build" alt="" coords="757,3443,905,3531">
+<area shape="rect" id="node18" href="project.html" target="_top" title="project" alt="" coords="337,3280,479,3368">
+<area shape="rect" id="node19" href="chain_stage.html" target="_top" title="chain_stage" alt="" coords="321,3385,495,3473">
+<area shape="rect" id="node20" href="buildresult_warning_summary.html" target="_top" title="buildresult_warning_summary" alt="" coords="1089,1115,1406,1291">
+<area shape="rect" id="node24" href="buildresultsummary_customdata.html" target="_top" title="buildresultsummary_customdata" alt="" coords="1077,1308,1417,1455">
+<area shape="rect" id="node25" href="buildresultsummary_label.html" target="_top" title="buildresultsummary_label" alt="" coords="1104,3161,1391,3425">
+<area shape="rect" id="node26" href="label.html" target="_top" title="label" alt="" coords="761,3265,900,3353">
+<area shape="rect" id="node27" href="cluster_node_heartbeat.html" target="_top" title="cluster_node_heartbeat" alt="" coords="275,3527,541,3615">
+<area shape="rect" id="node28" href="credentials.html" target="_top" title="credentials" alt="" coords="322,3632,494,3720">
+<area shape="rect" id="node29" href="crowd_deleted_entity.html" target="_top" title="crowd_deleted_entity" alt="" coords="283,3737,533,3825">
+<area shape="rect" id="node30" href="cwd_app_dir_default_groups.html" target="_top" title="cwd_app_dir_default_groups" alt="" coords="259,3843,557,3931">
+<area shape="rect" id="node31" href="cwd_app_dir_group_mapping.html" target="_top" title="cwd_app_dir_group_mapping" alt="" coords="679,3945,982,4033">
+<area shape="rect" id="node32" href="cwd_application.html" target="_top" title="cwd_application" alt="" coords="303,4036,513,4124">
+<area shape="rect" id="node33" href="cwd_directory.html" target="_top" title="cwd_directory" alt="" coords="311,4349,505,4437">
+<area shape="rect" id="node34" href="cwd_app_licensed_user.html" target="_top" title="cwd_app_licensed_user" alt="" coords="1117,3864,1377,3952">
+<area shape="rect" id="node35" href="cwd_app_licensing_dir_info.html" target="_top" title="cwd_app_licensing_dir_info" alt="" coords="686,4156,975,4244">
+<area shape="rect" id="node36" href="cwd_application_alias.html" target="_top" title="cwd_application_alias" alt="" coords="705,4051,956,4139">
+<area shape="rect" id="node37" href="cwd_expirable_user_token.html" target="_top" title="cwd_expirable_user_token" alt="" coords="688,795,973,883">
+<area shape="rect" id="node38" href="cwd_granted_perm.html" target="_top" title="cwd_granted_perm" alt="" coords="293,111,523,199">
+<area shape="rect" id="node39" href="cwd_group.html" target="_top" title="cwd_group" alt="" coords="747,4297,914,4385">
+<area shape="rect" id="node40" href="cwd_group_attribute.html" target="_top" title="cwd_group_attribute" alt="" coords="1125,4297,1369,4385">
+<area shape="rect" id="node41" href="cwd_membership.html" target="_top" title="cwd_membership" alt="" coords="721,4625,941,4713">
+<area shape="rect" id="node42" href="cwd_token.html" target="_top" title="cwd_token" alt="" coords="325,216,491,304">
+<area shape="rect" id="node43" href="cwd_tombstone.html" target="_top" title="cwd_tombstone" alt="" coords="305,321,511,409">
+<area shape="rect" id="node44" href="cwd_user.html" target="_top" title="cwd_user" alt="" coords="753,4475,909,4563">
+<area shape="rect" id="node45" href="cwd_user_attribute.html" target="_top" title="cwd_user_attribute" alt="" coords="1131,4475,1364,4563">
+<area shape="rect" id="node46" href="deployment_environment.html" target="_top" title="deployment_environment" alt="" coords="688,2772,973,2860">
+<area shape="rect" id="node47" href="deployment_project.html" target="_top" title="deployment_project" alt="" coords="288,2959,528,3047">
+<area shape="rect" id="node48" href="deployment_project_item.html" target="_top" title="deployment_project_item" alt="" coords="689,2983,972,3071">
+<area shape="rect" id="node49" href="deployment_result.html" target="_top" title="deployment_result" alt="" coords="1132,2763,1363,2851">
+<area shape="rect" id="node50" href="deployment_version.html" target="_top" title="deployment_version" alt="" coords="710,2877,951,2965">
+<area shape="rect" id="node51" href="deployment_version_item.html" target="_top" title="deployment_version_item" alt="" coords="1106,2887,1389,2975">
+<area shape="rect" id="node52" href="deployment_version_naming.html" target="_top" title="deployment_version_naming" alt="" coords="679,3088,983,3176">
+<area shape="rect" id="node53" href="deployment_version_status.html" target="_top" title="deployment_version_status" alt="" coords="1100,3028,1395,3116">
+<area shape="rect" id="node54" href="elastic_image.html" target="_top" title="elastic_image" alt="" coords="314,427,502,515">
+<area shape="rect" id="node55" href="imserver.html" target="_top" title="imserver" alt="" coords="331,532,485,620">
+<area shape="rect" id="node56" href="quick_filter_rules.html" target="_top" title="quick_filter_rules" alt="" coords="723,584,939,672">
+<area shape="rect" id="node57" href="quick_filters.html" target="_top" title="quick_filters" alt="" coords="319,637,497,725">
+<area shape="rect" id="node58" href="relevant_changesets.html" target="_top" title="relevant_changesets" alt="" coords="1488,733,1729,856">
+<area shape="rect" id="node59" href="repository_changeset.html" target="_top" title="repository_changeset" alt="" coords="1123,656,1371,861">
+<area shape="rect" id="node60" href="vcs_location.html" target="_top" title="vcs_location" alt="" coords="319,2131,497,2219">
+<area shape="rect" id="node61" href="stage_variable_context.html" target="_top" title="stage_variable_context" alt="" coords="701,1041,961,1129">
+<area shape="rect" id="node62" href="test_case_result.html" target="_top" title="test_case_result" alt="" coords="1800,2227,2007,2315">
+<area shape="rect" id="node63" href="test_class_result.html" target="_top" title="test_class_result" alt="" coords="1492,2224,1725,2400">
+<area shape="rect" id="node64" href="test_class.html" target="_top" title="test_class" alt="" coords="1168,3443,1327,3531">
+<area shape="rect" id="node65" href="trusted_apps.html" target="_top" title="trusted_apps" alt="" coords="315,779,501,867">
+<area shape="rect" id="node66" href="user_comment.html" target="_top" title="user_comment" alt="" coords="309,884,507,972">
+<area shape="rect" id="node67" href="user_commit.html" target="_top" title="user_commit" alt="" coords="1517,459,1701,547">
+<area shape="rect" id="node68" href="variable_baseline_item.html" target="_top" title="variable_baseline_item" alt="" coords="700,2631,961,2719">
+<area shape="rect" id="node69" href="variable_context.html" target="_top" title="variable_context" alt="" coords="1131,1508,1364,1684">
+<area shape="rect" id="node70" href="variable_substitution.html" target="_top" title="variable_substitution" alt="" coords="1123,1701,1372,1877">
+<area shape="rect" id="node71" href="vcs_branch.html" target="_top" title="vcs_branch" alt="" coords="1162,3548,1333,3636">
+<area shape="rect" id="node72" href="vcs_tag.html" target="_top" title="vcs_tag" alt="" coords="761,936,901,1024">
+<area shape="rect" id="node73" href="webhook_response.html" target="_top" title="webhook_response" alt="" coords="293,989,523,1077">
+<area shape="rect" id="node74" href="webhook_template.html" target="_top" title="webhook_template" alt="" coords="292,1095,524,1183">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/buildresultsummary.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

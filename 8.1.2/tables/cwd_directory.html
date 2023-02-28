@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>cwd_directory - bamboo_8_1_2 Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bamboo_8_1_2</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>cwd_directory</h1><p><span id="recordNumber">1</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cwd_app_dir_group_mapping.directory_id references cwd_directory.id via fk_e8n65yabj4t4fo1b675bwodpa"><a href='cwd_app_dir_group_mapping.html'>cwd_app_dir_group_mapping</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_e8n65yabj4t4fo1b675bwodpa<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_app_dir_mapping.directory_id references cwd_directory.id via fk_9s4l6aoctujeux3wx833mxle9"><a href='cwd_app_dir_mapping.html'>cwd_app_dir_mapping</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_9s4l6aoctujeux3wx833mxle9<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_app_licensing_dir_info.directory_id references cwd_directory.id via fk_m96p7iici19leqi4d0b66clvh"><a href='cwd_app_licensing_dir_info.html'>cwd_app_licensing_dir_info</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_m96p7iici19leqi4d0b66clvh<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_directory_attribute.directory_id references cwd_directory.id via fk_33hlip3152idxunvjduimfmt4"><a href='cwd_directory_attribute.html'>cwd_directory_attribute</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_33hlip3152idxunvjduimfmt4<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_directory_operation.directory_id references cwd_directory.id via fk_c83jhqyv18f3hac1phjqcwgjg"><a href='cwd_directory_operation.html'>cwd_directory_operation</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_c83jhqyv18f3hac1phjqcwgjg<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_group.directory_id references cwd_directory.id via fk_c1gre41vpf0em4fqx3h68hypa"><a href='cwd_group.html'>cwd_group</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_c1gre41vpf0em4fqx3h68hypa<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_group_attribute.directory_id references cwd_directory.id via fk_sdl2ff68get5nxfnd97rxmbyj"><a href='cwd_group_attribute.html'>cwd_group_attribute</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_sdl2ff68get5nxfnd97rxmbyj<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_membership.directory_id references cwd_directory.id via fk_dy12rwpyrjc7oskyf6rnxgyby"><a href='cwd_membership.html'>cwd_membership</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_dy12rwpyrjc7oskyf6rnxgyby<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_synchronisation_status.directory_id references cwd_directory.id via fk_clce0lxxnu12qkiwf3xu5iody"><a href='cwd_synchronisation_status.html'>cwd_synchronisation_status</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_clce0lxxnu12qkiwf3xu5iody<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_synchronisation_token.directory_id references cwd_directory.id via fk_6v2qf1ta4ixorcr6g1kaq44qg"><a href='cwd_synchronisation_token.html'>cwd_synchronisation_token</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_6v2qf1ta4ixorcr6g1kaq44qg<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_user.directory_id references cwd_directory.id via fk_61kyoc25on6xha3wh8627ao54"><a href='cwd_user.html'>cwd_user</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_61kyoc25on6xha3wh8627ao54<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="cwd_user_attribute.directory_id references cwd_directory.id via fk_jlyjg64hbadrou9yekx893u1w"><a href='cwd_user_attribute.html'>cwd_user_attribute</a><span class='relatedKey'>.directory_id</span></td>
+                                                <td class="constraint detail">fk_jlyjg64hbadrou9yekx893u1w<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="directory_name">directory_name</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cwd_directory.directory_name&#39;s name implies that it&#39;s a child of id_generator.name, but it doesn&#39;t reference that column."><a href='id_generator.html'>id_generator</a><span class='relatedKey'>.name</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="lower_directory_name">lower_directory_name</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cwd_directory.lower_directory_name&#39;s name implies that it&#39;s a child of id_generator.name, but it doesn&#39;t reference that column."><a href='id_generator.html'>id_generator</a><span class='relatedKey'>.name</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="created_date">created_date</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="updated_date">updated_date</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="active">active</span></td>
+                                    <td>bpchar</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="description">description</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="impl_class">impl_class</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="lower_impl_class">lower_impl_class</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="directory_type">directory_type</span></td>
+                                    <td>varchar</td>
+                                    <td>32</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> cwd_directory_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_dir_active</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>active</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_dir_l_impl_class</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>lower_impl_class</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>idx_dir_type</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>directory_type</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> uk_dir_l_name</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>lower_directory_name</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="cwd_app_dir_group_mapping.html" target="_top" title="cwd_app_dir_group_mapping" alt="" coords="747,24,1049,235">
+<area shape="rect" id="node2" href="cwd_app_dir_mapping.html" target="_top" title="cwd_app_dir_mapping" alt="" coords="427,5,680,181">
+<area shape="rect" id="node3" href="cwd_directory.html" target="_top" title="cwd_directory" alt="" coords="5,915,360,1277">
+<area shape="rect" id="node4" href="cwd_app_licensing_dir_info.html" target="_top" title="cwd_app_licensing_dir_info" alt="" coords="409,235,698,416">
+<area shape="rect" id="node5" href="cwd_directory_attribute.html" target="_top" title="cwd_directory_attribute" alt="" coords="418,433,689,580">
+<area shape="rect" id="node6" href="cwd_directory_operation.html" target="_top" title="cwd_directory_operation" alt="" coords="416,597,691,720">
+<area shape="rect" id="node7" href="cwd_group.html" target="_top" title="cwd_group" alt="" coords="454,737,653,1001">
+<area shape="rect" id="node8" href="cwd_group_attribute.html" target="_top" title="cwd_group_attribute" alt="" coords="776,815,1020,1049">
+<area shape="rect" id="node9" href="cwd_membership.html" target="_top" title="cwd_membership" alt="" coords="443,1055,663,1407">
+<area shape="rect" id="node10" href="cwd_synchronisation_status.html" target="_top" title="cwd_synchronisation_status" alt="" coords="404,1424,703,1659">
+<area shape="rect" id="node11" href="cwd_synchronisation_token.html" target="_top" title="cwd_synchronisation_token" alt="" coords="406,1676,701,1793">
+<area shape="rect" id="node12" href="cwd_user.html" target="_top" title="cwd_user" alt="" coords="446,1811,661,2280">
+<area shape="rect" id="node13" href="cwd_user_attribute.html" target="_top" title="cwd_user_attribute" alt="" coords="775,1989,1021,2253">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/cwd_directory.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="cwd_app_dir_default_groups.html" target="_top" title="cwd_app_dir_default_groups" alt="" coords="749,5,1047,93">
+<area shape="rect" id="node2" href="cwd_app_dir_mapping.html" target="_top" title="cwd_app_dir_mapping" alt="" coords="427,220,680,396">
+<area shape="rect" id="node4" href="cwd_application.html" target="_top" title="cwd_application" alt="" coords="77,383,288,471">
+<area shape="rect" id="node5" href="cwd_directory.html" target="_top" title="cwd_directory" alt="" coords="5,1515,360,1877">
+<area shape="rect" id="node3" href="cwd_app_dir_group_mapping.html" target="_top" title="cwd_app_dir_group_mapping" alt="" coords="747,321,1049,532">
+<area shape="rect" id="node6" href="cwd_app_dir_operation.html" target="_top" title="cwd_app_dir_operation" alt="" coords="767,111,1029,199">
+<area shape="rect" id="node7" href="cwd_app_licensed_user.html" target="_top" title="cwd_app_licensed_user" alt="" coords="1093,552,1353,640">
+<area shape="rect" id="node8" href="cwd_app_licensing_dir_info.html" target="_top" title="cwd_app_licensing_dir_info" alt="" coords="753,549,1043,731">
+<area shape="rect" id="node9" href="cwd_app_licensing.html" target="_top" title="cwd_app_licensing" alt="" coords="441,463,666,551">
+<area shape="rect" id="node10" href="cwd_directory_attribute.html" target="_top" title="cwd_directory_attribute" alt="" coords="418,2237,689,2384">
+<area shape="rect" id="node11" href="cwd_directory_operation.html" target="_top" title="cwd_directory_operation" alt="" coords="416,2401,691,2524">
+<area shape="rect" id="node12" href="cwd_granted_perm.html" target="_top" title="cwd_granted_perm" alt="" coords="783,216,1013,304">
+<area shape="rect" id="node13" href="cwd_group.html" target="_top" title="cwd_group" alt="" coords="454,1956,653,2220">
+<area shape="rect" id="node14" href="cwd_group_admin_group.html" target="_top" title="cwd_group_admin_group" alt="" coords="762,1959,1034,2047">
+<area shape="rect" id="node15" href="cwd_group_admin_user.html" target="_top" title="cwd_group_admin_user" alt="" coords="767,1600,1029,1688">
+<area shape="rect" id="node16" href="cwd_user.html" target="_top" title="cwd_user" alt="" coords="446,677,661,1147">
+<area shape="rect" id="node17" href="cwd_group_attribute.html" target="_top" title="cwd_group_attribute" alt="" coords="776,2253,1020,2488">
+<area shape="rect" id="node18" href="cwd_membership.html" target="_top" title="cwd_membership" alt="" coords="443,1200,663,1552">
+<area shape="rect" id="node19" href="cwd_synchronisation_status.html" target="_top" title="cwd_synchronisation_status" alt="" coords="404,1569,703,1804">
+<area shape="rect" id="node20" href="cwd_synchronisation_token.html" target="_top" title="cwd_synchronisation_token" alt="" coords="406,1821,701,1939">
+<area shape="rect" id="node21" href="cwd_user_attribute.html" target="_top" title="cwd_user_attribute" alt="" coords="775,960,1021,1224">
+<area shape="rect" id="node22" href="cwd_user_credential_record.html" target="_top" title="cwd_user_credential_record" alt="" coords="749,748,1047,836">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/cwd_directory.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="cwd_app_dir_group_mapping.html" target="_top" title="cwd_app_dir_group_mapping" alt="" coords="973,335,1276,546">
+<area shape="rect" id="node2" href="cwd_app_dir_mapping.html" target="_top" title="cwd_app_dir_mapping" alt="" coords="653,1091,907,1267">
+<area shape="rect" id="node3" href="cwd_directory.html" target="_top" title="cwd_directory" alt="" coords="232,859,587,1222">
+<area shape="rect" id="node4" href="id_generator.html" target="_top" title="id_generator" alt="" coords="5,1546,188,1663">
+<area shape="rect" id="node5" href="cwd_app_licensing_dir_info.html" target="_top" title="cwd_app_licensing_dir_info" alt="" coords="635,65,925,246">
+<area shape="rect" id="node6" href="cwd_directory_attribute.html" target="_top" title="cwd_directory_attribute" alt="" coords="645,653,915,799">
+<area shape="rect" id="node7" href="cwd_directory_operation.html" target="_top" title="cwd_directory_operation" alt="" coords="643,817,917,939">
+<area shape="rect" id="node8" href="cwd_group.html" target="_top" title="cwd_group" alt="" coords="681,263,879,527">
+<area shape="rect" id="node9" href="cwd_group_attribute.html" target="_top" title="cwd_group_attribute" alt="" coords="1003,563,1247,798">
+<area shape="rect" id="node10" href="cwd_membership.html" target="_top" title="cwd_membership" alt="" coords="670,1321,890,1673">
+<area shape="rect" id="node11" href="cwd_synchronisation_status.html" target="_top" title="cwd_synchronisation_status" alt="" coords="631,1690,929,1925">
+<area shape="rect" id="node12" href="cwd_synchronisation_token.html" target="_top" title="cwd_synchronisation_token" alt="" coords="633,957,927,1074">
+<area shape="rect" id="node13" href="cwd_user.html" target="_top" title="cwd_user" alt="" coords="673,1942,887,2411">
+<area shape="rect" id="node14" href="cwd_user_attribute.html" target="_top" title="cwd_user_attribute" alt="" coords="1002,1913,1247,2177">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/cwd_directory.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="access_token.html" target="_top" title="access_token" alt="" coords="691,7,875,95">
+<area shape="rect" id="node2" href="AO_C7F71E_OAUTH_SVC_PROV_TKNS.html" target="_top" title="AO_C7F71E_OAUTH_SVC_PROV_TKNS" alt="" coords="233,89,585,177">
+<area shape="rect" id="node3" href="id_generator.html" target="_top" title="id_generator" alt="" coords="5,2463,188,2581">
+<area shape="rect" id="node4" href="AO_4789DD_HEALTH_CHECK_STATUS.html" target="_top" title="AO_4789DD_HEALTH_CHECK_STATUS" alt="" coords="234,194,585,282">
+<area shape="rect" id="node5" href="AO_4789DD_PROPERTIES.html" target="_top" title="AO_4789DD_PROPERTIES" alt="" coords="276,299,543,387">
+<area shape="rect" id="node6" href="AO_A0B856_WEBHOOK.html" target="_top" title="AO_A0B856_WEBHOOK" alt="" coords="282,405,537,493">
+<area shape="rect" id="node7" href="AO_C77861_AUDIT_ENTITY.html" target="_top" title="AO_C77861_AUDIT_ENTITY" alt="" coords="270,510,549,598">
+<area shape="rect" id="node8" href="AO_ED669C_IDP_CONFIG.html" target="_top" title="AO_ED669C_IDP_CONFIG" alt="" coords="277,615,542,703">
+<area shape="rect" id="node9" href="AO_F1B80E_BRANCH_SELECTION.html" target="_top" title="AO_F1B80E_BRANCH_SELECTION" alt="" coords="248,721,571,809">
+<area shape="rect" id="node10" href="audit_log.html" target="_top" title="audit_log" alt="" coords="332,826,487,914">
+<area shape="rect" id="node11" href="auth_attempt_info.html" target="_top" title="auth_attempt_info" alt="" coords="295,931,523,1019">
+<area shape="rect" id="node12" href="author.html" target="_top" title="author" alt="" coords="340,1037,479,1125">
+<area shape="rect" id="node13" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="661,1101,904,1189">
+<area shape="rect" id="node14" href="merge_result.html" target="_top" title="merge_result" alt="" coords="317,1214,502,1302">
+<area shape="rect" id="node15" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="297,1319,522,1407">
+<area shape="rect" id="node16" href="buildresultsummary_label.html" target="_top" title="buildresultsummary_label" alt="" coords="987,1169,1273,1257">
+<area shape="rect" id="node17" href="label.html" target="_top" title="label" alt="" coords="713,1242,852,1330">
+<area shape="rect" id="node18" href="chain_stage.html" target="_top" title="chain_stage" alt="" coords="322,1461,497,1549">
+<area shape="rect" id="node19" href="cluster_node_heartbeat.html" target="_top" title="cluster_node_heartbeat" alt="" coords="276,1865,543,1953">
+<area shape="rect" id="node20" href="credentials.html" target="_top" title="credentials" alt="" coords="323,1602,495,1690">
+<area shape="rect" id="node21" href="crowd_deleted_entity.html" target="_top" title="crowd_deleted_entity" alt="" coords="284,1707,535,1795">
+<area shape="rect" id="node22" href="cwd_app_dir_default_groups.html" target="_top" title="cwd_app_dir_default_groups" alt="" coords="981,1607,1279,1695">
+<area shape="rect" id="node23" href="cwd_app_dir_mapping.html" target="_top" title="cwd_app_dir_mapping" alt="" coords="656,1829,909,2005">
+<area shape="rect" id="node25" href="cwd_application.html" target="_top" title="cwd_application" alt="" coords="304,2162,515,2250">
+<area shape="rect" id="node26" href="cwd_directory.html" target="_top" title="cwd_directory" alt="" coords="232,2402,587,2765">
+<area shape="rect" id="node24" href="cwd_app_dir_group_mapping.html" target="_top" title="cwd_app_dir_group_mapping" alt="" coords="979,1923,1281,2134">
+<area shape="rect" id="node27" href="cwd_app_dir_operation.html" target="_top" title="cwd_app_dir_operation" alt="" coords="999,1818,1261,1906">
+<area shape="rect" id="node28" href="cwd_app_licensed_user.html" target="_top" title="cwd_app_licensed_user" alt="" coords="1325,1318,1585,1406">
+<area shape="rect" id="node29" href="cwd_app_licensing_dir_info.html" target="_top" title="cwd_app_licensing_dir_info" alt="" coords="985,2151,1275,2333">
+<area shape="rect" id="node30" href="cwd_app_licensing.html" target="_top" title="cwd_app_licensing" alt="" coords="670,2202,895,2290">
+<area shape="rect" id="node31" href="cwd_application_alias.html" target="_top" title="cwd_application_alias" alt="" coords="657,1687,908,1775">
+<area shape="rect" id="node32" href="cwd_directory_attribute.html" target="_top" title="cwd_directory_attribute" alt="" coords="647,2582,918,2729">
+<area shape="rect" id="node33" href="cwd_directory_operation.html" target="_top" title="cwd_directory_operation" alt="" coords="645,2307,920,2430">
+<area shape="rect" id="node34" href="cwd_expirable_user_token.html" target="_top" title="cwd_expirable_user_token" alt="" coords="640,534,925,622">
+<area shape="rect" id="node35" href="cwd_granted_perm.html" target="_top" title="cwd_granted_perm" alt="" coords="1015,1713,1245,1801">
+<area shape="rect" id="node36" href="cwd_group.html" target="_top" title="cwd_group" alt="" coords="683,2818,882,3082">
+<area shape="rect" id="node37" href="cwd_group_admin_group.html" target="_top" title="cwd_group_admin_group" alt="" coords="994,2899,1266,2987">
+<area shape="rect" id="node38" href="cwd_group_admin_user.html" target="_top" title="cwd_group_admin_user" alt="" coords="999,3018,1261,3106">
+<area shape="rect" id="node39" href="cwd_user.html" target="_top" title="cwd_user" alt="" coords="675,3135,890,3605">
+<area shape="rect" id="node40" href="cwd_group_attribute.html" target="_top" title="cwd_group_attribute" alt="" coords="1008,2647,1252,2882">
+<area shape="rect" id="node41" href="cwd_membership.html" target="_top" title="cwd_membership" alt="" coords="673,3622,893,3974">
+<area shape="rect" id="node42" href="cwd_synchronisation_status.html" target="_top" title="cwd_synchronisation_status" alt="" coords="633,1399,932,1634">
+<area shape="rect" id="node43" href="cwd_synchronisation_token.html" target="_top" title="cwd_synchronisation_token" alt="" coords="635,2447,930,2565">
+<area shape="rect" id="node44" href="cwd_token.html" target="_top" title="cwd_token" alt="" coords="326,3322,493,3410">
+<area shape="rect" id="node45" href="cwd_tombstone.html" target="_top" title="cwd_tombstone" alt="" coords="306,3427,513,3515">
+<area shape="rect" id="node46" href="cwd_user_attribute.html" target="_top" title="cwd_user_attribute" alt="" coords="1007,3237,1253,3501">
+<area shape="rect" id="node47" href="cwd_user_credential_record.html" target="_top" title="cwd_user_credential_record" alt="" coords="981,3131,1279,3219">
+<area shape="rect" id="node48" href="deployment_environment.html" target="_top" title="deployment_environment" alt="" coords="640,4027,925,4115">
+<area shape="rect" id="node49" href="deployment_project.html" target="_top" title="deployment_project" alt="" coords="289,4099,529,4187">
+<area shape="rect" id="node50" href="deployment_project_item.html" target="_top" title="deployment_project_item" alt="" coords="641,4133,924,4221">
+<area shape="rect" id="node51" href="deployment_result.html" target="_top" title="deployment_result" alt="" coords="1015,4273,1245,4361">
+<area shape="rect" id="node52" href="deployment_version.html" target="_top" title="deployment_version" alt="" coords="662,4415,903,4503">
+<area shape="rect" id="node53" href="deployment_version_item.html" target="_top" title="deployment_version_item" alt="" coords="989,4378,1271,4466">
+<area shape="rect" id="node54" href="deployment_version_naming.html" target="_top" title="deployment_version_naming" alt="" coords="631,4238,935,4326">
+<area shape="rect" id="node55" href="deployment_version_status.html" target="_top" title="deployment_version_status" alt="" coords="983,4483,1277,4571">
+<area shape="rect" id="node56" href="elastic_image.html" target="_top" title="elastic_image" alt="" coords="315,4401,503,4489">
+<area shape="rect" id="node57" href="imserver.html" target="_top" title="imserver" alt="" coords="332,4506,487,4594">
+<area shape="rect" id="node58" href="quick_filter_rules.html" target="_top" title="quick_filter_rules" alt="" coords="675,4646,891,4734">
+<area shape="rect" id="node59" href="quick_filters.html" target="_top" title="quick_filters" alt="" coords="320,4611,499,4699">
+<area shape="rect" id="node60" href="trusted_apps.html" target="_top" title="trusted_apps" alt="" coords="317,4753,502,4841">
+<area shape="rect" id="node61" href="user_comment.html" target="_top" title="user_comment" alt="" coords="310,4858,509,4946">
+<area shape="rect" id="node62" href="vcs_branch.html" target="_top" title="vcs_branch" alt="" coords="324,4963,495,5051">
+<area shape="rect" id="node63" href="vcs_location.html" target="_top" title="vcs_location" alt="" coords="320,5105,499,5193">
+<area shape="rect" id="node64" href="vcs_tag.html" target="_top" title="vcs_tag" alt="" coords="713,5069,853,5157">
+<area shape="rect" id="node65" href="webhook_response.html" target="_top" title="webhook_response" alt="" coords="295,5210,524,5298">
+<area shape="rect" id="node66" href="webhook_template.html" target="_top" title="webhook_template" alt="" coords="293,5315,525,5403">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/cwd_directory.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>
