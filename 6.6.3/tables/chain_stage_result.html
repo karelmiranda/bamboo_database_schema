@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>chain_stage_result - bamboo_6_6_3 Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>bamboo_6_6_3</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>chain_stage_result</h1><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="stageresult_id">stageresult_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="buildresultsummary.stageresult_id references chain_stage_result.stageresult_id via fk_gp357kl07x691di4i2xn0c8hi"><a href='buildresultsummary.html'>buildresultsummary</a><span class='relatedKey'>.stageresult_id</span></td>
+                                                <td class="constraint detail">fk_gp357kl07x691di4i2xn0c8hi<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="stage_variable_context.stageresult_id references chain_stage_result.stageresult_id via fk_2ewf5u6g614u11mr4yxk847m3"><a href='stage_variable_context.html'>stage_variable_context</a><span class='relatedKey'>.stageresult_id</span></td>
+                                                <td class="constraint detail">fk_2ewf5u6g614u11mr4yxk847m3<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="created_date">created_date</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="updated_date">updated_date</span></td>
+                                    <td>timestamp</td>
+                                    <td>29,6</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="name">name</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="chain_stage_result.name&#39;s name implies that it&#39;s a child of id_generator.name, but it doesn&#39;t reference that column."><a href='id_generator.html'>id_generator</a><span class='relatedKey'>.name</span></td>
+                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="description">description</span></td>
+                                    <td>varchar</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="optional_stage">optional_stage</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="final_stage">final_stage</span></td>
+                                    <td>bool</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>false</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="processing_duration">processing_duration</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="chainresult_id">chainresult_id</span></td>
+                                    <td>int8</td>
+                                    <td>19</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="chain_stage_result.chainresult_id references buildresultsummary.buildresultsummary_id via fk_4p9t5luuw2awjxfgensarfhpn"><a href='buildresultsummary.html'>buildresultsummary</a><span class='relatedKey'>.buildresultsummary_id</span></td>
+                                                <td class="constraint detail">fk_4p9t5luuw2awjxfgensarfhpn<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="list_position">list_position</span></td>
+                                    <td>int4</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> chain_stage_result_pkey</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>stageresult_id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="377,248,648,717">
+<area shape="rect" id="node2" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="11,61,333,424">
+<area shape="rect" id="node3" href="stage_variable_context.html" target="_top" title="stage_variable_context" alt="" coords="392,5,633,181">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/chain_stage_result.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="brs_artifact_link.html" target="_top" title="brs_artifact_link" alt="" coords="755,5,948,93">
+<area shape="rect" id="node2" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="381,355,652,824">
+<area shape="rect" id="node5" href="merge_result.html" target="_top" title="merge_result" alt="" coords="89,732,263,820">
+<area shape="rect" id="node6" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="15,168,337,531">
+<area shape="rect" id="node7" href="variable_context_baseline.html" target="_top" title="variable_context_baseline" alt="" coords="45,627,307,715">
+<area shape="rect" id="node3" href="brs_consumed_subscription.html" target="_top" title="brs_consumed_subscription" alt="" coords="1051,40,1332,128">
+<area shape="rect" id="node4" href="brs_linkedjiraissues.html" target="_top" title="brs_linkedjiraissues" alt="" coords="741,147,962,235">
+<area shape="rect" id="node8" href="buildresultsummary_customdata.html" target="_top" title="buildresultsummary_customdata" alt="" coords="696,252,1007,340">
+<area shape="rect" id="node9" href="buildresultsummary_label.html" target="_top" title="buildresultsummary_label" alt="" coords="721,357,982,445">
+<area shape="rect" id="node10" href="relevant_changesets.html" target="_top" title="relevant_changesets" alt="" coords="1079,461,1304,549">
+<area shape="rect" id="node11" href="repository_changeset.html" target="_top" title="repository_changeset" alt="" coords="735,499,968,587">
+<area shape="rect" id="node12" href="stage_variable_context.html" target="_top" title="stage_variable_context" alt="" coords="396,112,637,288">
+<area shape="rect" id="node13" href="test_class_result.html" target="_top" title="test_class_result" alt="" coords="752,604,951,692">
+<area shape="rect" id="node14" href="variable_context.html" target="_top" title="variable_context" alt="" coords="753,709,949,797">
+<area shape="rect" id="node15" href="variable_substitution.html" target="_top" title="variable_substitution" alt="" coords="737,815,965,903">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/chain_stage_result.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="585,248,856,717">
+<area shape="rect" id="node2" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="219,61,541,424">
+<area shape="rect" id="node3" href="id_generator.html" target="_top" title="id_generator" alt="" coords="5,152,175,269">
+<area shape="rect" id="node4" href="stage_variable_context.html" target="_top" title="stage_variable_context" alt="" coords="600,5,841,181">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/chain_stage_result.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="AO_2F1435_HEALTH_CHECK_STATUS.html" target="_top" title="AO_2F1435_HEALTH_CHECK_STATUS" alt="" coords="224,321,577,409">
+<area shape="rect" id="node2" href="id_generator.html" target="_top" title="id_generator" alt="" coords="5,2516,175,2633">
+<area shape="rect" id="node3" href="AO_2F1435_PROPERTIES.html" target="_top" title="AO_2F1435_PROPERTIES" alt="" coords="269,427,533,515">
+<area shape="rect" id="node4" href="AO_C7F71E_OAUTH_SVC_PROV_TKNS.html" target="_top" title="AO_C7F71E_OAUTH_SVC_PROV_TKNS" alt="" coords="219,568,583,656">
+<area shape="rect" id="node5" href="AO_F1B80E_BRANCH_SELECTION.html" target="_top" title="AO_F1B80E_BRANCH_SELECTION" alt="" coords="235,673,567,761">
+<area shape="rect" id="node6" href="audit_log.html" target="_top" title="audit_log" alt="" coords="328,779,473,867">
+<area shape="rect" id="node7" href="auth_attempt_info.html" target="_top" title="auth_attempt_info" alt="" coords="297,884,505,972">
+<area shape="rect" id="node8" href="author.html" target="_top" title="author" alt="" coords="337,989,464,1077">
+<area shape="rect" id="node9" href="brs_artifact_link.html" target="_top" title="brs_artifact_link" alt="" coords="1019,1920,1212,2008">
+<area shape="rect" id="node10" href="buildresultsummary.html" target="_top" title="buildresultsummary" alt="" coords="636,1764,907,2233">
+<area shape="rect" id="node13" href="merge_result.html" target="_top" title="merge_result" alt="" coords="314,1953,487,2041">
+<area shape="rect" id="node14" href="chain_stage_result.html" target="_top" title="chain_stage_result" alt="" coords="239,1573,562,1936">
+<area shape="rect" id="node15" href="variable_context_baseline.html" target="_top" title="variable_context_baseline" alt="" coords="270,1324,531,1412">
+<area shape="rect" id="node11" href="brs_consumed_subscription.html" target="_top" title="brs_consumed_subscription" alt="" coords="1315,1893,1596,1981">
+<area shape="rect" id="node12" href="brs_linkedjiraissues.html" target="_top" title="brs_linkedjiraissues" alt="" coords="1005,1357,1226,1445">
+<area shape="rect" id="node16" href="buildresultsummary_customdata.html" target="_top" title="buildresultsummary_customdata" alt="" coords="960,1463,1271,1551">
+<area shape="rect" id="node17" href="buildresultsummary_label.html" target="_top" title="buildresultsummary_label" alt="" coords="985,2356,1246,2444">
+<area shape="rect" id="node18" href="label.html" target="_top" title="label" alt="" coords="715,2356,828,2444">
+<area shape="rect" id="node19" href="chain_stage.html" target="_top" title="chain_stage" alt="" coords="318,2167,483,2255">
+<area shape="rect" id="node20" href="credentials.html" target="_top" title="credentials" alt="" coords="322,2272,479,2360">
+<area shape="rect" id="node21" href="cwd_app_dir_default_groups.html" target="_top" title="cwd_app_dir_default_groups" alt="" coords="259,2377,543,2465">
+<area shape="rect" id="node22" href="cwd_app_dir_group_mapping.html" target="_top" title="cwd_app_dir_group_mapping" alt="" coords="627,2497,916,2585">
+<area shape="rect" id="node23" href="cwd_application.html" target="_top" title="cwd_application" alt="" coords="304,2519,497,2607">
+<area shape="rect" id="node24" href="cwd_directory.html" target="_top" title="cwd_directory" alt="" coords="311,2796,491,2884">
+<area shape="rect" id="node25" href="cwd_application_alias.html" target="_top" title="cwd_application_alias" alt="" coords="655,2603,888,2691">
+<area shape="rect" id="node26" href="cwd_expirable_user_token.html" target="_top" title="cwd_expirable_user_token" alt="" coords="638,532,905,620">
+<area shape="rect" id="node27" href="cwd_granted_perm.html" target="_top" title="cwd_granted_perm" alt="" coords="293,3169,508,3257">
+<area shape="rect" id="node28" href="cwd_group.html" target="_top" title="cwd_group" alt="" coords="692,2744,851,2832">
+<area shape="rect" id="node29" href="cwd_group_attribute.html" target="_top" title="cwd_group_attribute" alt="" coords="1003,2744,1228,2832">
+<area shape="rect" id="node30" href="cwd_membership.html" target="_top" title="cwd_membership" alt="" coords="669,3028,873,3116">
+<area shape="rect" id="node31" href="cwd_token.html" target="_top" title="cwd_token" alt="" coords="323,3275,479,3363">
+<area shape="rect" id="node32" href="cwd_tombstone.html" target="_top" title="cwd_tombstone" alt="" coords="305,3380,497,3468">
+<area shape="rect" id="node33" href="cwd_user.html" target="_top" title="cwd_user" alt="" coords="697,2921,845,3009">
+<area shape="rect" id="node34" href="cwd_user_attribute.html" target="_top" title="cwd_user_attribute" alt="" coords="1008,2921,1223,3009">
+<area shape="rect" id="node35" href="deployment_environment.html" target="_top" title="deployment_environment" alt="" coords="642,1041,901,1129">
+<area shape="rect" id="node36" href="deployment_project.html" target="_top" title="deployment_project" alt="" coords="291,1219,511,1307">
+<area shape="rect" id="node37" href="deployment_project_item.html" target="_top" title="deployment_project_item" alt="" coords="643,1288,900,1376">
+<area shape="rect" id="node38" href="deployment_result.html" target="_top" title="deployment_result" alt="" coords="1010,1041,1221,1129">
+<area shape="rect" id="node39" href="deployment_version.html" target="_top" title="deployment_version" alt="" coords="660,1147,883,1235">
+<area shape="rect" id="node40" href="deployment_version_item.html" target="_top" title="deployment_version_item" alt="" coords="985,1147,1246,1235">
+<area shape="rect" id="node41" href="deployment_version_naming.html" target="_top" title="deployment_version_naming" alt="" coords="630,1393,913,1481">
+<area shape="rect" id="node42" href="deployment_version_status.html" target="_top" title="deployment_version_status" alt="" coords="979,1252,1252,1340">
+<area shape="rect" id="node43" href="elastic_image.html" target="_top" title="elastic_image" alt="" coords="313,3485,489,3573">
+<area shape="rect" id="node44" href="external_entities.html" target="_top" title="external_entities" alt="" coords="303,3591,499,3679">
+<area shape="rect" id="node45" href="imserver.html" target="_top" title="imserver" alt="" coords="330,3696,471,3784">
+<area shape="rect" id="node46" href="quick_filter_rules.html" target="_top" title="quick_filter_rules" alt="" coords="671,3800,872,3888">
+<area shape="rect" id="node47" href="quick_filters.html" target="_top" title="quick_filters" alt="" coords="317,3837,484,3925">
+<area shape="rect" id="node48" href="relevant_changesets.html" target="_top" title="relevant_changesets" alt="" coords="1343,2016,1568,2104">
+<area shape="rect" id="node49" href="repository_changeset.html" target="_top" title="repository_changeset" alt="" coords="999,2061,1232,2149">
+<area shape="rect" id="node50" href="vcs_location.html" target="_top" title="vcs_location" alt="" coords="687,2251,856,2339">
+<area shape="rect" id="node51" href="stage_variable_context.html" target="_top" title="stage_variable_context" alt="" coords="651,1571,892,1747">
+<area shape="rect" id="node52" href="test_class_result.html" target="_top" title="test_class_result" alt="" coords="1016,1568,1215,1656">
+<area shape="rect" id="node53" href="trusted_apps.html" target="_top" title="trusted_apps" alt="" coords="314,3943,487,4031">
+<area shape="rect" id="node54" href="user_comment.html" target="_top" title="user_comment" alt="" coords="308,5,493,93">
+<area shape="rect" id="node55" href="users.html" target="_top" title="users" alt="" coords="341,111,461,199">
+<area shape="rect" id="node56" href="variable_context.html" target="_top" title="variable_context" alt="" coords="1017,1673,1213,1761">
+<area shape="rect" id="node57" href="variable_substitution.html" target="_top" title="variable_substitution" alt="" coords="1001,1779,1229,1867">
+<area shape="rect" id="node58" href="vcs_branch.html" target="_top" title="vcs_branch" alt="" coords="320,216,481,304">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/chain_stage_result.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>
