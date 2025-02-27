@@ -1,29 +1,93 @@
 <!DOCTYPE html>
 <html lang='en'>
- <head>
+<head>
   <title>Bamboo Database Schema</title>
   <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
- </head>
- <body>
-    <h1 style="margin: 25px;">Bamboo Database Schema</h1>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
-    <div style="margin-left: 75px;">
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/6.6.3">6.6.3</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/6.9.2">6.9.2</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/7.0.3">7.0.3</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/7.1.4">7.1.4</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/7.2.7">7.2.7</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/8.0.6">8.0.6</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/8.1.2">8.1.2</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/8.2.5">8.2.5</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/9.0.1">9.0.1</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/9.1.0">9.1.0</a></li>
-        <li><a href="https://karelmiranda.github.io/bamboo_database_schema/9.2.1">9.2.1</a></li>
-    </div>
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #f7f9fc;
+      font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      color: #343a40;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto;
+      width: 250px; /* Increased width for a larger image */
+    }
+    ul {
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: #3498db;
+      transition: color 0.2s, transform 0.2s, background-color 0.2s;
+      display: block;
+      padding: 10px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+    a:hover {
+      color: #ffffff;
+      background-color: #3498db;
+      transform: translateX(5px);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="icon/HeaderLogoBamboo.svg " alt="Bamboo Logo" class="logo">
+    <h1>Database Schema</h1>
+    <ul class="list-unstyled">
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/6.6.3">6.6.3</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/6.9.2">6.9.2</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/7.0.3">7.0.3</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/7.1.4">7.1.4</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/7.2.7">7.2.7</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/8.0.6">8.0.6</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/8.1.2">8.1.2</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/8.2.5">8.2.5</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/9.0.1">9.0.1</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/9.1.0">9.1.0</a></li>
+      <li><a href="https://karelmiranda.github.io/bamboo_database_schema/9.2.1">9.2.1</a></li>
+    </ul>
+  </div>
 
-    
- </body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq6W3pZ6Y2e3h7zj1b9M2p7M3K7t5t7A5G7V89mK3q5d3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWi4GxKVRm8FNKA7l4rW1qK7t5t7A5G7V89mK3q5d3" crossorigin="anonymous"></script>
+</body>
 </html>
